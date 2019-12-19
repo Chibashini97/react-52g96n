@@ -7,6 +7,4 @@ const LoginContainer = () =>{
     state : {authentication : login},
     dispatch,
     }=useStore();
-  console.log(state);
-  return state;
 }
