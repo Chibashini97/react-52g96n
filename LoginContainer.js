@@ -28,6 +28,7 @@ const LoginContainer = () =>{
     const handleChange = ()=>{
       setUsername(username);
       setPassword(password);
+      loadWelcome(dispatch);
     }
 }
 
