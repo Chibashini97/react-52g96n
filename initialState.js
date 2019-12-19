@@ -2,4 +2,4 @@ const login = {
   isDoneAuthenticate : false,
 };
 
-export {login}
+export default initialState
