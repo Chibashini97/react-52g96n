@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import {useStore} from './Store.js'
-import Login from './Login'
+import Login from './login'
 
 
 const LoginContainer = () =>{
@@ -9,7 +9,8 @@ const LoginContainer = () =>{
     dispatch,
     }=useStore();
     const {history} = props;
-
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     useEffect(()=>{
       loadWelcome(dispatch);
     },[]);
@@ -18,6 +19,17 @@ const LoginContainer = () =>{
       if(login.isDoneAuthenticate){
         history.push('/Logout')
       }
-    },[])
+    },[]);
+
+    const handleEvent = () =>{
+      loadWelcome(dispatch);
+    }
+
+    const handleChange = ()=>{
+      setUsername(username);
+      setPassword(password);
+    }
 }
+
+export default LoginContainer
 
